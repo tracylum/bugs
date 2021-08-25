@@ -24,4 +24,4 @@ test an app
 
 ↩
 
-[^1] footnote reference
+[^1]: footnote reference
