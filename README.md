@@ -1,5 +1,7 @@
 # bug
 
+[^1] footnote
+
 clean slate
 
 change 1
@@ -21,3 +23,5 @@ change 8
 test an app
 
 ↩
+
+[^1] footnote reference
