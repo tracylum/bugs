@@ -1,27 +1,13 @@
-# bug
+# Markdown
 
-[^1] footnote
+Here's a simple footnote,[^1] and here's a longer one.[^bignote]
 
-clean slate
+[^1]: This is the first footnote.
 
-change 1
+[^bignote]: Here's one with multiple paragraphs and code.
 
-change 3
+    Indent paragraphs to include them in the footnote.
 
-change 2
+    `{ my code }`
 
-change 4
-
-change 5
-
-change 6
-
-change 7
-
-change 8
-
-test an app
-
-↩
-
-[^1]: footnote reference
+    Add as many paragraphs as you like.
