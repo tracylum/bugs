@@ -12,6 +12,11 @@ Mauris pellentesque et enim ut pulvinar. Maecenas gravida finibus malesuada. Cur
 
 Proin vel feugiat elit. Vivamus massa nunc, accumsan quis ligula a, blandit condimentum metus. Praesent dapibus nulla non sapien aliquam ornare. Nulla facilisi. Sed felis nisl, pretium ut nulla vitae, eleifend eleifend purus. Maecenas eu tortor bibendum, ornare ligula nec, scelerisque orci. Pellentesque et nibh quis massa mattis suscipit eget sed libero. Integer turpis lorem, commodo ac odio vel, sodales mattis tortor. Suspendisse massa tellus, mattis sit amet accumsan nec, rhoncus eu nunc. Nam in est non turpis imperdiet tincidunt in scelerisque lectus. In interdum, metus vitae scelerisque posuere, purus orci posuere dolor, at auctor urna nibh ac purus. Maecenas elementum orci vitae eros aliquam, vel semper erat posuere. Praesent tempus feugiat purus ut posuere. Vivamus lacus lorem, viverra sit amet risus quis, consequat consequat tellus. Maecenas aliquet suscipit mi nec fermentum.
 
+| Syntax      | Description |
+| ----------- | ----------- |
+| Header[^5]      | Title       |
+| Paragraph   | Text        |
+
 [^1]: This is the first footnote.
 
 [^bignote]: Here's one with multiple paragraphs and code.
@@ -24,3 +29,4 @@ Proin vel feugiat elit. Vivamus massa nunc, accumsan quis ligula a, blandit cond
 
     Add as many paragraphs as you like.
 [^4]: we love references
+[^5]: even in tables
