@@ -3,19 +3,18 @@
 Issue #113: EOL character weirdness on Windows
 (Important: first line ends with CR + CR + LF)
 
-```````````````````````````````` example
 line1
 
 line2
 .
 <p>line1</p>
 <p>line2</p>
-````````````````````````````````
+
 
 Issue #114: cmark skipping first character in line
 (Important: the blank lines around "Repeatedly" contain a tab.)
 
-```````````````````````````````` example
+
 By taking it apart
 
 - alternative solutions
@@ -32,11 +31,11 @@ Repeatedly solving
 <ul>
 <li>how techniques</li>
 </ul>
-````````````````````````````````
+
 
 Issue jgm/CommonMark#430:  h2..h6 not recognized as block tags.
 
-```````````````````````````````` example
+
 <h1>lorem</h1>
 
 <h2>lorem</h2>
@@ -55,50 +54,49 @@ Issue jgm/CommonMark#430:  h2..h6 not recognized as block tags.
 <h4>lorem</h4>
 <h5>lorem</h5>
 <h6>lorem</h6>
-````````````````````````````````
+
 
 Issue jgm/commonmark.js#109 - tabs after setext header line
 
 
-```````````````````````````````` example
 hi
 --→
 .
 <h2>hi</h2>
-````````````````````````````````
+
 
 Issue #177 - incorrect emphasis parsing
 
-```````````````````````````````` example
+
 a***b* c*
 .
 <p>a*<em><em>b</em> c</em></p>
-````````````````````````````````
+
 
 Issue #193 - unescaped left angle brackets in link destination
 
-```````````````````````````````` example
+
 [a]
 
 [a]: <te<st>
 .
 <p>[a]</p>
 <p>[a]: &lt;te<st></p>
-````````````````````````````````
+
 
 Issue #192 - escaped spaces in link destination
 
 
-```````````````````````````````` example
+
 [a](te\ st)
 .
 <p>[a](te\ st)</p>
-````````````````````````````````
+
 
 Issue github/github#76615:  multiple delimiter combinations gets sketchy
 
 
-```````````````````````````````` example strikethrough
+
 ~~**_`this`_**~~  
 ~~***`this`***~~  
 ~~___`this`___~~
@@ -127,11 +125,10 @@ ___this___
 <p><strong><em>this</em></strong><br />
 <em><strong>this</strong></em><br />
 <em><strong>this</strong></em></p>
-````````````````````````````````
+
 
 Issue #527 - meta tags in inline contexts
 
-```````````````````````````````` example
 City:
 <span itemprop="contentLocation" itemscope itemtype="https://schema.org/City">
   <meta itemprop="name" content="Springfield">
@@ -141,33 +138,33 @@ City:
 <span itemprop="contentLocation" itemscope itemtype="https://schema.org/City">
 <meta itemprop="name" content="Springfield">
 </span></p>
-````````````````````````````````
+
 
 cmark-gfm strikethrough rules
 
-```````````````````````````````` example strikethrough
+
 ~Hi~ Hello, world!
 .
 <p><del>Hi</del> Hello, world!</p>
-````````````````````````````````
 
-```````````````````````````````` example strikethrough
+
+
 This ~text~ ~~is~~ ~~~curious~~~.
 .
 <p>This <del>text</del> <del>is</del> ~~~curious~~~.</p>
-````````````````````````````````
+
 
 `~` should not be escaped in href — https://github.com/github/markup/issues/311
 
-```````````````````````````````` example
+
 [x](http://members.aon.at/~nkehrer/ibm_5110/emu5110.html)
 .
 <p><a href="http://members.aon.at/~nkehrer/ibm_5110/emu5110.html">x</a></p>
-````````````````````````````````
+
 
 Footnotes in tables
 
-```````````````````````````````` example table footnotes
+
 A footnote in a paragraph[^1]
 
 | Column1   | Column2 |
@@ -198,11 +195,10 @@ A footnote in a paragraph[^1]
 </li>
 </ol>
 </section>
-````````````````````````````````
+
 
 Issue #527 - meta tags in inline contexts
 
-```````````````````````````````` example
 City:
 <span itemprop="contentLocation" itemscope itemtype="https://schema.org/City">
   <meta itemprop="name" content="Springfield">
@@ -212,11 +208,11 @@ City:
 <span itemprop="contentLocation" itemscope itemtype="https://schema.org/City">
 <meta itemprop="name" content="Springfield">
 </span></p>
-````````````````````````````````
+
 
 Issue #530 - link parsing corner cases
 
-```````````````````````````````` example
+
 [a](\ b)
 
 [a](<<b)
@@ -228,20 +224,19 @@ Issue #530 - link parsing corner cases
 <p>[a](&lt;&lt;b)</p>
 <p>[a](&lt;b
 )</p>
-````````````````````````````````
+
 
 Issue commonmark#526 - unescaped ( in link title
 
-```````````````````````````````` example
 [link](url ((title))
 .
 <p>[link](url ((title))</p>
-````````````````````````````````
+
 
 Issue commonamrk#517 - script, pre, style close tag without
 opener.
 
-```````````````````````````````` example
+
 </script>
 
 </pre>
@@ -251,29 +246,28 @@ opener.
 </script>
 </pre>
 </style>
-````````````````````````````````
+
 
 Issue #289.
 
-```````````````````````````````` example
+
 [a](<b) c>
 .
 <p>[a](&lt;b) c&gt;</p>
-````````````````````````````````
 
 Pull request #128 - Buffer overread in tables extension
 
-```````````````````````````````` example table
+
 |
 -|
 .
 <p>|
 -|</p>
-````````````````````````````````
+
 
 Footnotes may be nested inside other footnotes.
 
-```````````````````````````````` example footnotes
+
 This is some text. It has a citation.[^citation]
 
 [^another-citation]: My second citation.
@@ -291,11 +285,10 @@ This is some text. It has a citation.[^citation]
 </li>
 </ol>
 </section>
-````````````````````````````````
+
 
 Footnotes are similar to, but should not be confused with, link references
 
-```````````````````````````````` example footnotes
 This is some text. It has two footnotes references, side-by-side without any spaces,[^footnote1][^footnote2] which are definitely not link references.
 
 [^footnote1]: Hello.
@@ -313,11 +306,11 @@ This is some text. It has two footnotes references, side-by-side without any spa
 </li>
 </ol>
 </section>
-````````````````````````````````
+
 
 Footnotes may begin with or have a 'w' or a '_' in their reference label.
 
-```````````````````````````````` example footnotes autolink
+
 This is some text. Sometimes the autolinker splits up text into multiple nodes, hoping it will find a hyperlink, so this text has a footnote whose reference label begins with a `w`.[^widely-cited]
 
 It has another footnote that contains many different characters (the autolinker was also breaking on `_`).[^sphinx-of-black-quartz_judge-my-vow-0123456789]
@@ -338,31 +331,30 @@ It has another footnote that contains many different characters (the autolinker 
 </li>
 </ol>
 </section>
-````````````````````````````````
+
 
 Footnotes interacting with strikethrough should not lead to a use-after-free
 
-```````````````````````````````` example footnotes autolink strikethrough table
+
 |Tot.....[^_a_]|
 .
 <p>|Tot.....[^_a_]|</p>
-````````````````````````````````
+
 
 Footnotes interacting with strikethrough should not lead to a use-after-free pt2
 
-```````````````````````````````` example footnotes autolink strikethrough table
+
 [^~~is~~1]
 .
 <p>[^~~is~~1]</p>
-````````````````````````````````
+
 
 Adjacent unused footnotes definitions should not lead to a use after free
 
-```````````````````````````````` example footnotes autolink strikethrough table
 Hello world
 
 
 [^a]:[^b]:
 .
 <p>Hello world</p>
-````````````````````````````````
+
